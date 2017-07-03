@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="state.better.statedemo"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="state.better.statedemo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -14,9 +14,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -24,28 +24,23 @@
             android:configChanges="keyboardHidden"
             android:label="@string/title_activity_state1"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity
             android:name=".fragment.FragmentContainerActivity"
             android:configChanges="keyboardHidden"
             android:label="Fragment"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity
             android:name=".fragment.FragmentAddActivity"
-            android:label="@string/title_activity_fragment_add">
-        </activity>
+            android:label="@string/title_activity_fragment_add"></activity>
         <activity
             android:name=".fragment.FragmentReplaceActivity"
-            android:label="@string/title_activity_fragment_add">
-        </activity>
+            android:label="@string/title_activity_fragment_add"></activity>
         <activity
             android:name=".fragment.DiffFragmentStateRestoreActivity"
-            android:label="diff">
-        </activity>
-
+            android:label="diff"></activity>
+        <activity android:name=".activity.lazy.LazyLoadActivity"></activity>
     </application>
 
 </manifest>

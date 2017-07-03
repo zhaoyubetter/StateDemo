@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import state.better.statedemo.activity.lazy.LazyLoadActivity;
 import state.better.statedemo.activity.StateActivity1;
 import state.better.statedemo.fragment.DiffFragmentStateRestoreActivity;
 import state.better.statedemo.fragment.FragmentAddActivity;
@@ -46,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getApplicationContext(), DiffFragmentStateRestoreActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		// fragment 延迟加载
+		findViewById(R.id.load_fragment).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), LazyLoadActivity.class);
 				startActivity(intent);
 			}
 		});

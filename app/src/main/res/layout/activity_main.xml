@@ -29,4 +29,10 @@
         android:layout_height="wrap_content"
         android:text="fragment_diff_instance"/>
 
+    <Button
+        android:id="@+id/load_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lazy Fragment加载"/>
+
 </LinearLayout>
