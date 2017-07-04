@@ -14,21 +14,16 @@ import java.util.List;
  * Created by zhaoyu1 on 2017/7/3.
  */
 
-public class LazyFragmentPagerAdapter extends FragmentPagerAdapter {
-
-    // FragmentStatePagerAdapter
-
-    // FragmentPagerAdapter 常驻内存，可查看源码
-
+public class LazyFragmentStatePagerAdapter extends FragmentStatePagerAdapter {
     private List<Fragment> mFragments;
     private List<CharSequence> mTitles;
     private int mLastPosition = -1;
 
-    public LazyFragmentPagerAdapter(FragmentManager fm) {
+    public LazyFragmentStatePagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
-    public LazyFragmentPagerAdapter(FragmentManager fm, List<Fragment> fragments, List<CharSequence> titles) {
+    public LazyFragmentStatePagerAdapter(FragmentManager fm, List<Fragment> fragments, List<CharSequence> titles) {
         this(fm);
         this.mFragments = new ArrayList<>();
         this.mTitles = new ArrayList<>();
@@ -60,7 +55,7 @@ public class LazyFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return mFragments.get(position);
+       return mFragments.get(position);
     }
 
     @Override

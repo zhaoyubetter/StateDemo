@@ -30,6 +30,7 @@ public class LazyLoadActivity extends AppCompatActivity {
 
         initData();
         PagerAdapter adapter = new LazyFragmentPagerAdapter(getSupportFragmentManager(), fragments, titles);
+        //PagerAdapter adapter = new LazyFragmentStatePagerAdapter(getSupportFragmentManager(), fragments, titles);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -41,8 +42,8 @@ public class LazyLoadActivity extends AppCompatActivity {
         }
 
         fragments = new ArrayList<>(20);
-        for(int i=0; i<20; i++) {
-            fragments.add(LazyFragment1.getInstance(""+i));
+        for (int i = 0; i < 20; i++) {
+            fragments.add(LazyFragment1.getInstance("" + i));
         }
     }
 }

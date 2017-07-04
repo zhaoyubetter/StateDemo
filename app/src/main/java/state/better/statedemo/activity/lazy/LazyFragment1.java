@@ -22,6 +22,8 @@ public class LazyFragment1 extends BaseFragment implements LazyLoadCallBack {
 
     TextView title;
 
+    private String position = "";
+
     public static Fragment getInstance(String title) {
         LazyFragment1 fragment1 = new LazyFragment1();
         Bundle bundle = new Bundle();
@@ -42,6 +44,7 @@ public class LazyFragment1 extends BaseFragment implements LazyLoadCallBack {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         title.setText("我是 fragment ： " + getArguments().getString("title"));
+        this.position = getArguments().getString("title");
 
 
     }
