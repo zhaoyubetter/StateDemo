@@ -51,6 +51,6 @@ public class LazyFragment1 extends BaseFragment implements LazyLoadCallBack {
      */
     @Override
     public void onLoad() {
-        Log.e(TAG, this.toString() + " 加载数据。。。");
+        Log.e(TAG, this.toString() + " 假设在这里进行网络请求数据。。。");
     }
 }
